@@ -92,6 +92,25 @@
         "
         :class="{ 'md:grow-0! md:basis-0!': !menuOpen }"
       >
+        <div class="text-sm">
+          Select a preset
+          <div class="mt-1 flex gap-2">
+            <UButton
+              icon="i-heroicons-home-modern"
+              label="Corp"
+              color="primary"
+              variant="solid"
+              @click="selectPreset('corp')"
+            />
+            <UButton
+              icon="i-heroicons-user"
+              label="Runner"
+              color="primary"
+              variant="solid"
+              @click="selectPreset('runner')"
+            />
+          </div>
+        </div>
         <div class="flex min-w-40 flex-col gap-4">
           <UFormField
             label="Card pool"
@@ -159,6 +178,11 @@ const selectedCards = ref<NrdbCard[]>([])
 const outputList = computed(() => {
   return selectedCards.value.map(c => `1 ${c.strippedTitle}`).join('\n')
 })
+const presets = useFormatPresets()
+
+const selectPreset = (preset: 'runner' | 'corp') => {
+  inputList.value = presets[preset]
+}
 
 const cards = computed(() => {
   return inputList.value.split('\n').map((text) => {
