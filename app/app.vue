@@ -27,3 +27,14 @@
     <UFooter />
   </UApp>
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Pawnshop Formathelper',
+  ogTitle: 'Pawnshop Formathelper',
+  description: 'Helping tool for the Pawnshop Netruner format',
+  ogDescription: 'Helping tool for the Pawnshop Netruner format',
+  ogImage: 'https://pawnshop.gordianbla.de/aesops.png',
+  twitterCard: 'summary_large_image',
+})
+</script>
