@@ -85,7 +85,7 @@
             v-model="inputList"
             :rows="20"
             class="w-full"
-            placeholder="Copy your list from NRDB here"
+            placeholder="Copy your list from NRDB here (in jinteki.net format)"
           />
         </UFormField>
         <UFormField
