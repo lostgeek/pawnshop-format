@@ -1,0 +1,10 @@
+html {
+    font-size: clamp(16px, 0.8vw, 28px);
+
+    font-synthesis: none;
+    font-smooth: auto;
+}
+
+body {
+    @apply antialiased text-pretty;
+}
