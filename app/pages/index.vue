@@ -1,67 +1,19 @@
 <template>
   <UContainer class="pt-8">
-    <div class="grid grid-cols-12 gap-4">
-      <ul
+    <div
+      class="
+        flex gap-8
+        max-md:flex-col
+      "
+    >
+      <div
         class="
-          col-span-8 grid
-          grid-cols-[repeat(auto-fill,minmax(calc(var(--card-height)/88*63),1fr))]
-          place-items-center gap-4
-          max-md:order-2 max-md:col-span-12
+          grow basis-2/3
+          max-md:order-2
         "
         :style="{ '--card-height': `${cardHeight}px` }"
       >
-        <li
-          v-for="card in cards"
-          :key="card.code"
-        >
-          <div
-            role="button"
-            tabindex="0"
-            class="
-              group relative w-fit rounded-md
-              before:pointer-events-none before:absolute before:inset-0
-              before:rounded-md before:bg-black/25 before:opacity-0
-              before:transition-opacity before:duration-100 before:content-['']
-              hover-focus:before:pointer-events-auto
-              hover-focus:before:opacity-100
-            "
-
-            :class="{ 'shadow-xl shadow-primary/50 outline-4 outline-primary': selectedCards.some(c => c.code === card.code) }"
-            @click="markCard(card)"
-            @keydown.space.prevent="markCard(card)"
-            @keydown.enter.prevent="markCard(card)"
-          >
-            <NrdbCard
-              :card="card"
-              class="h-(--card-height) transition-[height] duration-200"
-            />
-            <div
-              class="
-                pointer-events-none absolute top-1 right-1 z-10 flex size-5
-                items-center justify-center rounded-full bg-red-600 opacity-0
-                transition-opacity duration-100
-                group-hover-focus:pointer-events-auto
-                group-hover-focus:opacity-100
-              "
-            >
-              <UButton
-                icon="i-lucide-x-circle"
-                size="xs"
-                color="error"
-                variant="solid"
-                @click="deleteCard(card)"
-              />
-            </div>
-          </div>
-        </li>
-      </ul>
-      <div
-        class="
-          col-span-4 flex flex-col gap-4
-          max-md:order-1 max-md:col-span-12
-        "
-      >
-        <div class="flex gap-2">
+        <div class="mb-4 flex gap-2">
           <span>Card size</span>
           <UButton
             icon="i-lucide-plus"
@@ -78,27 +30,119 @@
             @click="cardHeight /= 1.1"
           />
         </div>
-        <UFormField
-          label="Card pool"
+        <ul
+          class="
+            grid
+            grid-cols-[repeat(auto-fill,minmax(calc(var(--card-height)/88*63),1fr))]
+            place-items-center gap-4
+          "
         >
-          <UTextarea
-            v-model="inputList"
-            :rows="20"
-            class="w-full"
-            placeholder="Copy your list from NRDB here (in jinteki.net format)"
-          />
-        </UFormField>
-        <UFormField
-          label="Your selected cards"
-        >
-          <UTextarea
-            v-model="outputList"
-            class="w-full"
-            readonly
-            :rows="20"
-          />
-        </UFormField>
+          <li
+            v-for="card in cards"
+            :key="card.code"
+          >
+            <div
+              role="button"
+              tabindex="0"
+              class="
+                group relative w-fit rounded-md
+                before:pointer-events-none before:absolute before:inset-0
+                before:rounded-md before:bg-black/25 before:opacity-0
+                before:transition-opacity before:duration-100
+                before:content-['']
+                hover-focus:before:pointer-events-auto
+                hover-focus:before:opacity-100
+              "
+
+              :class="{ 'shadow-xl shadow-primary/50 outline-4 outline-primary': selectedCards.some(c => c.code === card.code) }"
+              @click="markCard(card)"
+              @keydown.space.prevent="markCard(card)"
+              @keydown.enter.prevent="markCard(card)"
+            >
+              <NrdbCard
+                :card="card"
+                class="h-(--card-height) transition-[height] duration-200"
+              />
+              <div
+                class="
+                  pointer-events-none absolute top-1 right-1 z-10 flex size-5
+                  items-center justify-center rounded-full bg-red-600 opacity-0
+                  transition-opacity duration-100
+                  group-hover-focus:pointer-events-auto
+                  group-hover-focus:opacity-100
+                "
+              >
+                <UButton
+                  icon="i-lucide-x-circle"
+                  size="xs"
+                  color="error"
+                  variant="solid"
+                  @click="deleteCard(card)"
+                />
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
+      <div
+        class="
+          flex min-w-0 grow basis-1/3 flex-col gap-4 overflow-hidden
+          transition-[flex-basis] duration-500 ease-out
+          max-md:order-1
+        "
+        :class="{ 'md:grow-0! md:basis-0!': !menuOpen }"
+      >
+        <div class="flex min-w-40 flex-col gap-4">
+          <UFormField
+            label="Card pool"
+          >
+            <UTextarea
+              v-model="inputList"
+              :rows="20"
+              class="w-full"
+              placeholder="Copy your list from NRDB here (in jinteki.net format)"
+            />
+          </UFormField>
+          <UFormField
+            label="Your selected cards"
+          >
+            <UTextarea
+              v-model="outputList"
+              class="w-full"
+              readonly
+              :rows="20"
+            />
+          </UFormField>
+          <div class="max-md:hidden">
+            <UButton
+              icon="i-lucide-eye-off"
+              color="primary"
+              variant="solid"
+              label="Hide menu"
+              @click="menuOpen = !menuOpen"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="
+        fixed inset-y-0 right-0 flex -translate-x-4 flex-col justify-center
+        transition-transform duration-500 ease-out
+        max-md:hidden
+      "
+      :class="{
+        'translate-x-full!': menuOpen ,
+      }"
+    >
+      <UButton
+        icon="i-lucide-chevron-left"
+        size="lg"
+        color="neutral"
+        variant="soft"
+        class="rounded-full"
+        @click="menuOpen = !menuOpen"
+      />
     </div>
   </UContainer>
 </template>
@@ -107,6 +151,8 @@
 const { data } = await useNrdbCards()
 
 const cardHeight = ref(196)
+
+const menuOpen = ref(true)
 
 const inputList = ref('')
 const selectedCards = ref<NrdbCard[]>([])
