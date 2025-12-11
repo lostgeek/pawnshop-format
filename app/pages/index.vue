@@ -146,12 +146,13 @@
     </div>
     <div
       class="
-        fixed inset-y-0 right-0 flex -translate-x-4 flex-col justify-center
+        fixed inset-y-0 right-0 flex flex-col justify-center
         transition-transform duration-500 ease-out
         max-md:hidden
+        2xl:-translate-x-4
       "
       :class="{
-        'translate-x-full!': menuOpen ,
+        'rotate-y-180 max-xl:translate-x-full!': menuOpen ,
       }"
     >
       <UButton
