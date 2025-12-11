@@ -34,11 +34,12 @@
           class="
             grid
             grid-cols-[repeat(auto-fill,minmax(calc(var(--card-height)/88*63),1fr))]
-            place-items-center gap-4
+            place-items-center gap-2
+            md:gap-4
           "
         >
           <li
-            v-for="card in cards"
+            v-for="card in filteredCards"
             :key="card.code"
           >
             <div
@@ -187,17 +188,19 @@ const selectPreset = (preset: 'runner' | 'corp') => {
 
 const { debouncedSearch, filterCards } = useSearch()
 const cards = computed(() => {
-  const result = inputList.value.split('\n').map((text) => {
+  return inputList.value.split('\n').map((text) => {
     const cardName = text.split(' ').slice(1)
       .join(' ')
     return data.value?.find(c => c.title === cardName || c.strippedTitle === cardName)
   })
     .filter(x => x !== undefined)
+})
 
+const filteredCards = computed(() => {
   if (debouncedSearch.value.length > 0) {
-    return filterCards(result)
+    return filterCards(cards.value)
   } else {
-    return result
+    return cards.value
   }
 })
 
