@@ -23,6 +23,7 @@ const numericOperand = (
 // Helper function for string comparisons
 const stringOperand = (
   getValue: (card: NrdbCard) => string | undefined,
+  stringOperation: (s: string, searchValue: string) => boolean = (s, searchValue) => s.startsWith(searchValue),
 ) => (operator: '<' | '>' | ':' | '!', value: string) => {
   // String operands only support : and ! operators
   if (operator === '<' || operator === '>') return undefined
@@ -30,9 +31,8 @@ const stringOperand = (
     const cardValue = getValue(card)
     if (cardValue === undefined) return false
     const searchValue = value.toLowerCase()
-    const cardValueLower = cardValue.toLowerCase()
-    if (operator === ':') return cardValueLower.includes(searchValue)
-    if (operator === '!') return !cardValueLower.includes(searchValue)
+    if (operator === ':') return stringOperation(cardValue, searchValue)
+    if (operator === '!') return !stringOperation(cardValue, searchValue)
     return false
   }
 }
@@ -62,6 +62,8 @@ const operands: Record<string, NrdbExpression> = {
   l: numericOperand(card => card.baseLink),
   // o – cost
   o: numericOperand(card => card.cost),
+  // f - faction
+  f: stringOperand(card => card.factionCode),
   // a – flavor text
   a: stringOperand(card => card.flavor),
   // i – illustrator
@@ -79,7 +81,8 @@ const operands: Record<string, NrdbExpression> = {
   // p – strength
   p: numericOperand(card => card.strength),
   // s – subtype
-  s: stringOperand(card => card.keywords),
+  s: stringOperand(card => card.keywords, (s, searchValue) => s.split(' - ').map(keyword => keyword.trim().toLowerCase())
+    .some(keyword => keyword.startsWith(searchValue))),
   // x – text
   x: stringOperand(card => card.strippedText),
   // h – trash cost
