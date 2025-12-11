@@ -84,7 +84,7 @@ const operands: Record<string, NrdbExpression> = {
   s: stringOperand(card => card.keywords, (s, searchValue) => s.split(' - ').map(keyword => keyword.trim().toLowerCase())
     .some(keyword => keyword.startsWith(searchValue))),
   // x – text
-  x: stringOperand(card => card.strippedText),
+  x: stringOperand(card => card.strippedText, (s, searchValue) => s.includes(searchValue)),
   // h – trash cost
   h: numericOperand(card => card.trashCost),
   // t – type
