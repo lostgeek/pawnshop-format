@@ -111,6 +111,11 @@ const expressions = computed<Array<((card: NrdbCard) => boolean)>>(() => {
 })
 
 const filterCards = (cards: NrdbCard[]) => {
+  if (!debouncedSearch.value.length) return cards
+  if (!expressions.value.length) {
+    // no expressions, so we need to filter by title
+    return cards.filter(card => card.title.toLowerCase().startsWith(debouncedSearch.value.toLowerCase()) || card.strippedTitle.toLowerCase().startsWith(debouncedSearch.value.toLowerCase()))
+  }
   return cards.filter(card => expressions.value.every(expression => expression(card)))
 }
 
