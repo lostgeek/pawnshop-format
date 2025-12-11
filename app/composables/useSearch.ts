@@ -28,7 +28,7 @@ const stringOperand = (
   // String operands only support : and ! operators
   if (operator === '<' || operator === '>') return undefined
   return (card: NrdbCard) => {
-    const cardValue = getValue(card)
+    const cardValue = getValue(card)?.toLowerCase()
     if (cardValue === undefined) return false
     const searchValue = value.toLowerCase()
     if (operator === ':') return stringOperation(cardValue, searchValue)
