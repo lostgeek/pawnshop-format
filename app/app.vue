@@ -4,7 +4,12 @@
     <NuxtLoadingIndicator />
     <UHeader
       title="Pawnshop Format"
-      :ui="{ container: 'relative', title: 'flex items-center gap-4 -translate-x-6' }"
+      :ui="{
+        container: 'relative',
+        title: 'flex items-center gap-4 -translate-x-6',
+        center: 'flex-0!',
+        right: 'flex-2!',
+      }"
     >
       <template #title>
         <NuxtImg
@@ -15,6 +20,21 @@
         <div>
           Pawnshop
         </div>
+      </template>
+      <template #right>
+        <UInput
+          v-model="searchInput"
+          class="w-full"
+          placeholder="Search cards (NRDB syntax)"
+        />
+        <UButton
+          color="neutral"
+          variant="ghost"
+          to="https://netrunnerdb.com/en/syntax"
+          trailing-icon="i-heroicons-arrow-top-right-on-square"
+        >
+          Syntax
+        </UButton>
       </template>
     </UHeader>
 
@@ -37,4 +57,6 @@ useSeoMeta({
   ogImage: 'https://pawnshop.gordianbla.de/aesops.png',
   twitterCard: 'summary_large_image',
 })
+
+const { searchInput } = useSearch()
 </script>

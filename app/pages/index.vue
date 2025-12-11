@@ -185,13 +185,20 @@ const selectPreset = (preset: 'runner' | 'corp') => {
   inputList.value = presets[preset]
 }
 
+const { debouncedSearch, filterCards } = useSearch()
 const cards = computed(() => {
-  return inputList.value.split('\n').map((text) => {
+  const result = inputList.value.split('\n').map((text) => {
     const cardName = text.split(' ').slice(1)
       .join(' ')
     return data.value?.find(c => c.title === cardName || c.strippedTitle === cardName)
   })
     .filter(x => x !== undefined)
+
+  if (debouncedSearch.value.length > 0) {
+    return filterCards(result)
+  } else {
+    return result
+  }
 })
 
 const markCard = (card: NrdbCard) => {

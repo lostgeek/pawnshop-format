@@ -19,6 +19,13 @@ export interface NrdbCard {
   strippedText?: string
   text?: string
   imageUrl?: string
+  baseLink?: number
+  cost?: number
+  memoryCost?: number
+  strength?: number
+  advancementCost?: number
+  agendaPoints?: number
+  trashCost?: number
 }
 
 const transformCards = (data: any): NrdbCard[] => {
@@ -29,12 +36,12 @@ const transformCards = (data: any): NrdbCard[] => {
   return data.data.map((card: any) => {
     return {
       code: card.code,
-      deckLimit: card.deck_limit,
+      deckLimit: card.deck_limit ? Number(card.deck_limit) : undefined,
       factionCode: card.faction_code,
-      factionCost: card.faction_cost,
+      factionCost: card.faction_cost ? Number(card.faction_cost) : undefined,
       packCode: card.pack_code,
-      position: card.position,
-      quantity: card.quantity,
+      position: card.position ? Number(card.position) : undefined,
+      quantity: card.quantity ? Number(card.quantity) : undefined,
       sideCode: card.side_code,
       strippedTitle: card.stripped_title,
       title: card.title,
@@ -48,6 +55,13 @@ const transformCards = (data: any): NrdbCard[] => {
       strippedText: card.stripped_text,
       text: card.text,
       imageUrl: template.replace('{code}', card.code),
+      baseLink: card.base_link ? Number(card.base_link) : undefined,
+      cost: card.cost ? Number(card.cost) : undefined,
+      memoryCost: card.memory_cost ? Number(card.memory_cost) : undefined,
+      strength: card.strength ? Number(card.strength) : undefined,
+      advancementCost: card.advancement_cost ? Number(card.advancement_cost) : undefined,
+      agendaPoints: card.agenda_points ? Number(card.agenda_points) : undefined,
+      trashCost: card.trash_cost ? Number(card.trash_cost) : undefined,
     }
   })
 }
