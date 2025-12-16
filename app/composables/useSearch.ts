@@ -104,11 +104,14 @@ const expressions = computed<Array<((card: NrdbCard) => boolean)>>(() => {
       return undefined
     }
 
-    const expressionFactory = operands[operand]
-    if (!expressionFactory) return undefined
+    const orExpressions = value.split('|').map((value) => {
+      const expressionFactory = operands[operand]
+      if (!expressionFactory) return undefined
 
-    const expression = expressionFactory(operator, value)
-    return expression
+      const expression = expressionFactory(operator, value)
+      return expression
+    })
+    return (card: NrdbCard) => orExpressions.some(expression => expression?.(card))
   })
   return Array.from(iterator.filter(x => x !== undefined))
 })
