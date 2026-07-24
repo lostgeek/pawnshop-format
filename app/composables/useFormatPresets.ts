@@ -1,5 +1,25 @@
 
-const runner = `1 Aircheck
+const runner = `1 Apex: Invasive Predator
+1 Ayla "Bios" Rahim: Simulant Specialist
+1 Captain Padma Isbister: Intrepid Explorer
+1 Dewi Subrotoputri: Pedagogical Dhalang
+1 Exile: Streethawk
+1 Iain Stirling: Retired Spook
+1 Jesminder Sareen: Girl Behind the Curtain
+1 Khan: Savvy Skiptracer
+1 Laramy Fisk: Savvy Investor
+1 Nasir Meidan: Cyber Explorer
+1 Nathaniel "Gnat" Hall: One-of-a-Kind
+1 Nero Severn: Information Broker
+1 Nova Initiumia: Catalyst & Impetus
+1 Null: Whistleblower
+1 Reina Roja: Freedom Fighter
+1 Ryō "Phoenix" Ōno: Out of the Ashes
+1 Silhouette: Stealth Operative
+1 Sunny Lebeau: Security Specialist
+1 The Professor: Keeper of Knowledge
+1 Topan: Ormas Leader
+1 Aircheck
 1 Always Have a Backup Plan
 1 Another Day, Another Paycheck
 1 Beta Build
@@ -434,7 +454,35 @@ const runner = `1 Aircheck
 1 Upya
 1 Wari`
 
-const corp = `1 Advanced Concept Hopper
+const corp = `1 Ampère: Cybernetics For Anyone
+1 BANGUN: When Disaster Strikes
+1 Custom Biotics: Engineered for Success
+1 Cybernetics Division: Humanity Upgraded
+1 Editorial Division: Ad Nihilum
+1 GameNET: Where Dreams are Real
+1 GRNDL: Power Unleashed
+1 Haas-Bioroid: Architects of Tomorrow
+1 Haas-Bioroid: Stronger Together
+1 Harishchandra Ent.: Where You're the Star
+1 Harmony Medtech: Biomedical Pioneer
+1 Hyoubu Institute: Absolute Clarity
+1 Issuaq Adaptics: Sustaining Diversity
+1 NBN: Making News
+1 NBN: The World is Yours*
+1 New Angeles Sol: Your News
+1 NEXT Design: Guarding the Net
+1 Nisei Division: The Next Generation
+1 Poétrï Luxury Brands: All the Rage
+1 PT Untaian: Life's Building Blocks
+1 Saraswati Mnemonics: Endless Exploration
+1 Seidr Laboratories: Destiny Defined
+1 SSO Industries: Fueling Innovation
+1 Synapse Global: Faster than Thought
+1 The Foundry: Refining the Process
+1 Thunderbolt Armaments: Peace Through Power
+1 Weyland Consortium: Because We Built It
+1 Weyland Consortium: Building a Better World
+1 Advanced Concept Hopper
 1 Ancestral Imager
 1 Armored Servers
 1 Award Bait
