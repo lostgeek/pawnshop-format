@@ -1,29 +1,8 @@
 
-const runner = `1 Apex: Invasive Predator
-1 Ayla "Bios" Rahim: Simulant Specialist
-1 Az McCaffrey: Mechanical Prodigy
-1 Captain Padma Isbister: Intrepid Explorer
-1 Dewi Subrotoputri: Pedagogical Dhalang
-1 Exile: Streethawk
-1 Iain Stirling: Retired Spook
-1 Jesminder Sareen: Girl Behind the Curtain
-1 Khan: Savvy Skiptracer
-1 Laramy Fisk: Savvy Investor
-1 Los: Data Hijacker
-1 Nasir Meidan: Cyber Explorer
-1 Nathaniel "Gnat" Hall: One-of-a-Kind
-1 Nero Severn: Information Broker
-1 Nova Initiumia: Catalyst & Impetus
-1 Null: Whistleblower
-1 Reina Roja: Freedom Fighter
-1 Ryō "Phoenix" Ōno: Out of the Ashes
-1 Silhouette: Stealth Operative
-1 Sunny Lebeau: Security Specialist
-1 The Professor: Keeper of Knowledge
-1 Topan: Ormas Leader
+const runner = `1 Aircheck
 1 Always Have a Backup Plan
 1 Another Day, Another Paycheck
-1 Because I Can
+1 Beta Build
 1 Blueberry!™ Diesel
 1 Bribery
 1 Brute-Force-Hack
@@ -32,12 +11,12 @@ const runner = `1 Apex: Invasive Predator
 1 Calling in Favors
 1 Careful Planning
 1 CBI Raid
+1 Chain Reaction
 1 Charm Offensive
 1 Chrysopoeian Skimming
 1 Code Siphon
 1 Cold Read
 1 Concerto
-1 Contaminate
 1 Corporate Scandal
 1 Credit Crash
 1 Cyber Threat
@@ -61,10 +40,10 @@ const runner = `1 Apex: Invasive Predator
 1 Frame Job
 1 Frantic Coding
 1 Freelance Coding Contract
+1 Game Day
 1 Glut Cipher
 1 Government Investigations
 1 Guinea Pig
-1 Harmony AR Therapy
 1 High-Stakes Job
 1 Immolation Script
 1 In the Groove
@@ -75,6 +54,7 @@ const runner = `1 Apex: Invasive Predator
 1 Insight
 1 Isolation
 1 Itinerant Protesters
+1 Kompromat
 1 Kraken
 1 Lawyer Up
 1 Lean and Mean
@@ -87,6 +67,7 @@ const runner = `1 Apex: Invasive Predator
 1 Möbius
 1 Net Celebrity
 1 Networking
+1 Office Supplies
 1 On the Lam
 1 Paper Tripping
 1 Planned Assault
@@ -94,9 +75,11 @@ const runner = `1 Apex: Invasive Predator
 1 Populist Rally
 1 Power Nap
 1 Power to the People
+1 Prey
 1 Process Automation
 1 Push Your Luck
 1 Pushing the Envelope
+1 Queen's Gambit
 1 Recon
 1 Reshape
 1 Rigged Results
@@ -115,6 +98,7 @@ const runner = `1 Apex: Invasive Predator
 1 SYN Attack
 1 System Outage
 1 System Seizure
+1 Take a Dive
 1 The Noble Path
 1 The Price of Freedom
 1 Three Steps Ahead
@@ -123,6 +107,7 @@ const runner = `1 Apex: Invasive Predator
 1 Traffic Jam
 1 Uninstall
 1 Unscheduled Maintenance
+1 VRcation
 1 Windfall
 1 Acacia
 1 Adjusted Matrix
@@ -130,9 +115,11 @@ const runner = `1 Apex: Invasive Predator
 1 Amanuensis
 1 Archives Interface
 1 Autoscripter
+1 Basilar Synthgland 2KVJ
 1 Blackguard
 1 Bling
 1 Bookmark
+1 Borrowed Goods
 1 Box-E
 1 Capstone
 1 Capybara
@@ -152,7 +139,6 @@ const runner = `1 Apex: Invasive Predator
 1 Dyson Mem Chip
 1 Ekomind
 1 EMP Device
-1 Feedback Filter
 1 Flip Switch
 1 Forger
 1 Gebrselassie
@@ -165,6 +151,7 @@ const runner = `1 Apex: Invasive Predator
 1 Logos
 1 Lucky Charm
 1 Mâché
+1 Maglectric Rapid (748 Mod)
 1 Māui
 1 Maya
 1 MemStrips
@@ -186,6 +173,7 @@ const runner = `1 Apex: Invasive Predator
 1 Reflection
 1 Replicator
 1 Respirocytes
+1 Rotary
 1 Rubicon Switch
 1 Security Chip
 1 Severnius Stim Implant
@@ -198,6 +186,7 @@ const runner = `1 Apex: Invasive Predator
 1 The Personal Touch
 1 The Toolbox
 1 The Wizard’s Chest
+1 Time Bomb
 1 Top Hat
 1 Ubax
 1 Unregistered S&W '35
@@ -214,16 +203,19 @@ const runner = `1 Apex: Invasive Predator
 1 Amelia Earhart
 1 Angel Arena
 1 Armitage Codebusting
+1 Artist Colony
 1 Asmund Pudlat
 1 Assimilator
 1 Avgustina Ivanovskaya
 1 Bazaar
 1 Beach Party
+1 Beatriz Friere Gonzalez
 1 Bio-Modeled Network
 1 Biometric Spoofing
 1 Blockade Runner
 1 Borrowed Satellite
 1 Bug Out Bag
+1 Cacophony
 1 Caldera
 1 Charlatan
 1 Chatterjee University
@@ -250,14 +242,13 @@ const runner = `1 Apex: Invasive Predator
 1 Ghost Runner
 1 Globalsec Security Clearance
 1 Grifter
+1 Hackerspace
 1 Hard at Work
-1 Hernando Cortez
 1 Human First
 1 Ice Analyzer
 1 Inside Man
 1 Investigative Journalism
 1 Jackpot!
-1 Jak Sinclair
 1 Juli Moreira Lee
 1 Kasi String
 1 Keros Mcintyre
@@ -269,6 +260,7 @@ const runner = `1 Apex: Invasive Predator
 1 Mr. Li
 1 Muertos Gang Member
 1 Network Exchange
+1 Nurse Hạnh
 1 Officer Frank
 1 Oracle May
 1 Order of Sol
@@ -280,17 +272,16 @@ const runner = `1 Apex: Invasive Predator
 1 Public Sympathy
 1 Rachel Beckman
 1 Raymond Flint
-1 Reclaim
 1 Red Team
 1 Rent Rioters
 1 Rolodex
-1 Rosetta 2.0
 1 Sacrificial Clone
-1 Scrubber
+1 Salsette Slums
 1 Slipstream
 1 Smartware Distributor
 1 Spoilers
 1 Starlight Crusade Funding
+1 Stick and Poke
 1 Stim Dealer
 1 Street Magic
 1 Synthetic Blood
@@ -307,17 +298,15 @@ const runner = `1 Apex: Invasive Predator
 1 Thunder Art Gallery
 1 Tri-maf Contact
 1 Tyson Observatory
-1 Utopia Shard
 1 Valentina Ferreira Carvalho
-1 Verbal Plasticity
 1 Virus Breeding Ground
 1 Wasteland
 1 Whistleblower
 1 Woman in the Red Dress
+1 Word on the Street
 1 Xanadu
 1 Zona Sul Shipping
 1 Abaasy
-1 Abagnale
 1 Adept
 1 Aghora
 1 Alias
@@ -335,6 +324,7 @@ const runner = `1 Apex: Invasive Predator
 1 Cerberus "Cuj.0" H3
 1 Cerberus "Rex" H2
 1 Chameleon
+1 Corsair
 1 Cradle
 1 Creeper
 1 Crowbar
@@ -371,19 +361,18 @@ const runner = `1 Apex: Invasive Predator
 1 Odore
 1 Omega
 1 Overmind
-1 Passport
 1 Peacock
 1 Peregrine
 1 Persephone
 1 Pipeline
 1 Pressure Spike
+1 Principia
 1 Puffer
 1 Sadyojata
 1 Sage
 1 Saker
 1 Savant
 1 Sharpshooter
-1 Shiv
 1 Snowball
 1 Spike
 1 Study Guide
@@ -422,6 +411,8 @@ const runner = `1 Apex: Invasive Predator
 1 Hemorrhage
 1 Incubator
 1 Ixodidae
+1 Lampades
+1 Lamprey
 1 Laser Pointer
 1 LLDS Energy Regulator
 1 Monkeywrench
@@ -437,38 +428,13 @@ const runner = `1 Apex: Invasive Predator
 1 Rook
 1 Saci
 1 Savoir-faire
-1 Snitch
+1 Sipa
 1 Tracker
 1 Trypano
 1 Upya
 1 Wari`
 
-const corp = `1 Ampère: Cybernetics For Anyone
-1 BANGUN: When Disaster Strikes
-1 Custom Biotics: Engineered for Success
-1 Cybernetics Division: Humanity Upgraded
-1 GameNET: Where Dreams are Real
-1 Haas-Bioroid: Architects of Tomorrow
-1 Haas-Bioroid: Stronger Together
-1 Harishchandra Ent.: Where You're the Star
-1 Harmony Medtech: Biomedical Pioneer
-1 Hyoubu Institute: Absolute Clarity
-1 Issuaq Adaptics: Sustaining Diversity
-1 NBN: Making News
-1 NBN: The World is Yours*
-1 NEXT Design: Guarding the Net
-1 New Angeles Sol: Your News
-1 Nisei Division: The Next Generation
-1 PT Untaian: Life's Building Blocks
-1 SSO Industries: Fueling Innovation
-1 Saraswati Mnemonics: Endless Exploration
-1 Seidr Laboratories: Destiny Defined
-1 Synapse Global: Faster than Thought
-1 The Foundry: Refining the Process
-1 Thunderbolt Armaments: Peace Through Power
-1 Weyland Consortium: Because We Built It
-1 Weyland Consortium: Building a Better World
-1 Advanced Concept Hopper
+const corp = `1 Advanced Concept Hopper
 1 Ancestral Imager
 1 Armored Servers
 1 Award Bait
@@ -488,7 +454,6 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Escalate Vitriol
 1 Executive Retreat
 1 Firmware Updates
-1 Flower Sermon
 1 Genetic Resequencing
 1 Geothermal Fracking
 1 Gila Hands Arcology
@@ -528,6 +493,7 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Puppet Master
 1 Rebranding Team
 1 Remote Data Farm
+1 Remote Enforcement
 1 Research Grant
 1 Restructured Datapool
 1 Salvo Testing
@@ -536,6 +502,7 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Sentinel Defense Program
 1 Show of Force
 1 Standoff
+1 Stoke the Embers
 1 Superconducting Hub
 1 Superior Cyberwalls
 1 The Cleaners
@@ -545,11 +512,9 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Underway Renovation
 1 Unorthodox Predictions
 1 Utopia Fragment
-1 Vanity Project
 1 Veterans Program
 1 Voting Machine Initiative
 1 Vulcan Coverup
-1 Vulnerability Audit
 1 Water Monopoly
 1 Aggressive Secretary
 1 Alexa Belsky
@@ -569,6 +534,7 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 City Surveillance
 1 Clyde Van Rite
 1 Constellation Protocol
+1 Contract Killer
 1 CPC Generator
 1 CSR Campaign
 1 Dedicated Response Team
@@ -586,13 +552,13 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Franchise City
 1 Full Immersion RecStudio
 1 Fumiko Yamamori
-1 Gene Splicer
 1 Ghost Branch
 1 GRNDL Refinery
 1 Haas Arcology AI
 1 Honeyfarm
 1 Hyoubu Research Facility
-1 Indian Union Stock Exchange
+1 Ibrahim Salem
+1 Idiosyncresis
 1 Isabel McGuire
 1 IT Department
 1 Janaína "JK" Dumont Kindelán
@@ -601,14 +567,17 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Levy University
 1 Lily Lockwell
 1 Long-Term Investment
+1 Luana Campos
 1 Mark Yale
 1 Marked Accounts
+1 Mental Health Clinic
 1 Mr. Stone
 1 Mumbad Construction Co.
 1 Nanoetching Matrix
 1 Net Analytics
 1 Net Police
 1 Neurostasis
+1 Nihilo Agent
 1 Open Forum
 1 PAD Factory
 1 Pālanā Agroplex
@@ -642,7 +611,6 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 The News Now Hour
 1 The Root
 1 Thomas Haas
-1 Tiered Subscription
 1 Toshiyuki Sakai
 1 Ubiquitous Vig
 1 Vaporframe Fabricator
@@ -657,7 +625,6 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 An Offer You Can’t Refuse
 1 Anonymous Tip
 1 Argus Crackdown
-1 Armed Asset Protection
 1 Back Channels
 1 Backroom Machinations
 1 Bad Times
@@ -665,16 +632,19 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Biased Reporting
 1 Big Brother
 1 Bioroid Efficiency Research
+1 Bring Them Home
 1 Building Blocks
 1 Casting Call
 1 Cerebral Cast
+1 Cerebral Static
 1 Commercialization
 1 Complete Image
 1 Corporate Shuffle
+1 Cultivate
 1 Cyberdex Trial
 1 Defective Brainchips
+1 Digital Rights Management
 1 Distract the Masses
-1 Diversified Portfolio
 1 Divert Power
 1 Door to Door
 1 Eavesdrop
@@ -687,13 +657,13 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Freelancer
 1 Game Over
 1 Hangeki
+1 Hasty Relocation
 1 Hatchet Job
 1 Hellion Alpha Test
 1 Heritage Committee
 1 Hyoubu Precog Manifold
 1 Invasion of Privacy
 1 IP Enforcement
-1 Kakurenbo
 1 Kill Switch
 1 Lag Time
 1 Liquidation
@@ -703,6 +673,7 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 MCA Informant
 1 Medical Research Fundraiser
 1 Mutate
+1 NAPD Cordon
 1 Nonequivalent Exchange
 1 O₂ Shortage
 1 Observe and Destroy
@@ -714,15 +685,18 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Priority Construction
 1 Product Recall
 1 Psychokinesis
+1 realloc()
 1 Recruiting Trip
 1 Replanting
 1 Restoring Face
+1 Retribution
 1 Reuse
 1 Reverse Infection
 1 Rework
 1 Rolling Brownout
 1 Rover Algorithm
 1 Sacrifice
+1 Scapegoat
 1 Scapenet
 1 Secure and Protect
 1 Service Outage
@@ -737,7 +711,6 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Sunset
 1 Surveillance Sweep
 1 SYNC Rerouting
-1 Threat Assessment
 1 Threat Level Alpha
 1 Traffic Accident
 1 Transparency Initiative
@@ -755,6 +728,7 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 ChiLo City Grid
 1 Code Replicator
 1 Cold Site Server
+1 Corporate Troubleshooter
 1 Daruma
 1 Dedicated Technician Team
 1 Defense Construct
@@ -769,6 +743,7 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Henry Phillips
 1 Increased Drop Rates
 1 Intake
+1 Isaac Liberdade
 1 K. P. Lynn
 1 Khondi Plaza
 1 Letheia Nisei
@@ -781,9 +756,10 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Nihongai Grid
 1 Oaktown Grid
 1 Off the Grid
-1 Old Hollywood Grid
 1 Panic Button
+1 Perfect Recall
 1 Port Anson Grid
+1 Product Placement
 1 Reduced Service
 1 Research Station
 1 Ruhr Valley
@@ -791,11 +767,11 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Ryon Knight
 1 Satellite Grid
 1 Self-destruct
+1 Shackleton Grid
 1 Shell Corporation
 1 Signal Jamming
 1 Simone Diego
 1 Strongbox
-1 Surat City Grid
 1 Tempus
 1 The Twins
 1 Tori Hanzō
@@ -835,6 +811,7 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Palisade
 1 Paper Wall
 1 Quicksand
+1 Reverb
 1 Seidr Adaptive Barrier
 1 Self-Adapting Code Wall
 1 Snowflake
@@ -856,6 +833,7 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Datapike
 1 Diviner
 1 Executive Functioning
+1 ezaM
 1 Fairchild
 1 Fairchild 1.0
 1 Free Lunch
@@ -873,25 +851,27 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Marker
 1 Merlin
 1 Metamorph
+1 Mind Game
 1 Minelayer
 1 Nerine 2.0
 1 NEXT Opal
 1 NEXT Sapphire
 1 Nightdancer
 1 Peeping Tom
-1 Pulse
 1 Red Tape
 1 RSVP
 1 Salvage
 1 Sandman
 1 Sensei
 1 Shiro
+1 Syailendra
 1 Tapestry
 1 TL;DR
 1 Upayoga
+1 Valentão
+1 Vertigo
 1 Viktor 1.0
 1 Viktor 2.0
-1 Viper
 1 Waiver
 1 Watchtower
 1 Wave
@@ -913,11 +893,11 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Mganga
 1 Rime
 1 Sand Storm
-1 Special Offer
+1 Vicsek
 1 Whirlpool
+1 Ansel 2.0
 1 Assassin
 1 Ballista
-1 Bathynomus
 1 Bloodletter
 1 Brainstorm
 1 Burke Bugs
@@ -925,7 +905,6 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Chrysalis
 1 Data Hound
 1 Dracō
-1 Empiricist
 1 Enforcer 1.0
 1 Errand Boy
 1 Fenris
@@ -940,7 +919,9 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Janus 1.0
 1 Kamali 1.0
 1 Karunā
+1 Lamplighter
 1 Lancelot
+1 Lethe
 1 Lycan
 1 Mamba
 1 Matrix Analyzer
@@ -961,6 +942,7 @@ const corp = `1 Ampère: Cybernetics For Anyone
 1 Shinobi
 1 Snoop
 1 Sorocaban Blade
+1 Susanoo-no-Mikoto
 1 Swarm
 1 SYNC BRE
 1 Taurus
